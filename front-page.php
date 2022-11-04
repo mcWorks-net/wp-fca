@@ -39,16 +39,18 @@
             ?>
 
             <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
-
-          <div id="general-1" class="glevel__item">
-            <div class="glevel__item__content active">
-              <a href="<?php echo the_permalink(); ?>">
-                <i class="<?php echo get_field('icon_class') ?>"></i>
-                <h3><?php the_title() ?></h3>
-                <p><?php echo get_field('subtitle_description') ?></p>
-              </a>
-            </div>
-          </div>
+ 
+          
+              <div id="general-1" class="glevel__item">
+                <div class="glevel__item__content active">
+                  <a href="<?php echo the_permalink(); ?>">
+                    <i class="<?php echo get_field('icon_class') ?>"></i>
+                    <h3><?php the_title() ?></h3>
+                    <p><?php echo get_field('subtitle_description') ?></p>
+                  </a>
+                </div>
+              </div>
+        
 
           <?php
                 endwhile;
