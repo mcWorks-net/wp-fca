@@ -6561,3 +6561,11 @@ width: 100%;
   margin-top: -11rem;
 }
 
+.abt-tab__item__img img {
+  margin: 0 0.5rem;
+}
+
+.abt-tab__item__img {
+  justify-content: unset;
+  margin: 0;
+}
