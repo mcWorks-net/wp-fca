@@ -310,7 +310,7 @@ function removeActiveContentA() {
 }
 
 
-//-----------------------------Added on Wordpres
+//-----------------------------Added on Wordpres Home
 
 const whyTextBullet = document.getElementById("rdbtn-1-btn");
 const whyText = document.getElementById("rdbtn-1");
@@ -319,3 +319,4 @@ const whyVideo = document.getElementById("rdbtn-1-content");
 whyVideo.classList.add('active');
 whyTextBullet.classList.add('active');
 whyText.classList.add('active');
+

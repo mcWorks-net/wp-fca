@@ -26,8 +26,9 @@
                   ?>
 
                   <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
+                  
 
-                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                    <li><a href="<?php echo $site_Url ?>"><?php the_title(); ?></a></li>
                     
                   <?php
                       endwhile;

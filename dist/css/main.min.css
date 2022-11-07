@@ -6524,6 +6524,8 @@ body {
 }
 
 
+
+
 .header2__nav ul {
   width: 100%;
 }
@@ -6568,4 +6570,8 @@ width: 100%;
 .abt-tab__item__img {
   justify-content: unset;
   margin: 0;
+}
+
+.glevel__item:last-child .glevel__item__content:last-child {
+  border-right: none;
 }

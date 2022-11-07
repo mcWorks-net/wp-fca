@@ -33,7 +33,7 @@
             <?php 
                 $args = array(
                 'post_type' => 'admission',
-                'posts_per_page' => 4,
+                'posts_per_page' => -1,
                 );
                 $newQuery = new WP_Query($args)
             ?>
@@ -43,7 +43,20 @@
           
               <div id="general-1" class="glevel__item">
                 <div class="glevel__item__content active">
-                  <a href="<?php echo the_permalink(); ?>">
+                  <?php
+
+                  $theTitle = get_field('id');
+
+                  $site_Url = add_query_arg($theTitle,' ','admission');
+                  
+                  ?>
+                  <a href="<?php 
+                  
+                  
+
+                 echo $site_Url
+                  
+                  ?>">
                     <i class="<?php echo get_field('icon_class') ?>"></i>
                     <h3><?php the_title() ?></h3>
                     <p><?php echo get_field('subtitle_description') ?></p>
@@ -191,6 +204,7 @@
 
     <?php the_content(); ?>
 
+
     <section class="location">
       <div class="location__wrapper">
         <div class="mapouter">
@@ -223,6 +237,5 @@
         </div>
       </div>
     </section>
-
 
 <?php get_footer()?>
