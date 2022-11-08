@@ -33,11 +33,41 @@
           </div>
           <div class="header2__contacts">
             <ul>
-              <li><i class="fa-solid fa-phone"></i>049 521 0732</li>
-              <li>
-                <i class="fa-solid fa-mobile-retro"></i>0908 202 0749 | 0926 363
-                9722
-              </li>
+
+              <?php
+                $homepage_id = get_option('page_on_front');
+              ?>
+
+              <?php
+                if(have_rows('contact_details',$homepage_id)): 
+              ?>
+
+              <?php 
+              
+              while(have_rows('contact_details',$homepage_id)) : the_row(); 
+              ?>
+
+              <?php 
+              $counter = $counter + 1;
+
+              if ($counter < 4){
+
+
+              ?>
+                  <li><i class="<?php the_sub_field('icon'); ?>"></i><?php the_sub_field('text'); ?></li>
+
+              <?php 
+            
+                $counter++;
+            
+            } ?>
+                    
+
+              <?php endwhile; ?>
+              <?php else: ?>
+                  <p>No details found.</p>
+              <?php endif; ?>
+
               <li>
                 <a
                   href="https://www.facebook.com/frontlinechristianacademy"
@@ -61,6 +91,16 @@
           </ul>
           <div class="header2__contacts">
             <ul>
+
+                <?php 
+                    $args = array(
+                    'post_type' => 'admission',
+                    'posts_per_page' => -1,
+                    );
+                    $newQuery = new WP_Query($args)
+                ?>
+
+
               <li><i class="fa-solid fa-phone"></i>049 521 0732</li>
               <li>
                 <i class="fa-solid fa-mobile-retro"></i>0908 202 0749 | 0926 363

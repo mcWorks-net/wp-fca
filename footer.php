@@ -1,5 +1,6 @@
 <?php wp_footer() ?>
 
+
 <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
@@ -27,8 +28,17 @@
 
                   <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
                   
+                  <?php
+                  
+                  
+                  $id = get_field('id');
 
-                    <li><a href="<?php echo $site_Url ?>"><?php the_title(); ?></a></li>
+                  // $site_Url = add_query_arg($theTitle,' ','admission');
+
+                  
+                  ?>
+
+                    <li><a href="<?php echo 'http://localhost/wp-fca/admission/?'.$id.'=' ?>"><?php the_title(); ?></a></li>
                     
                   <?php
                       endwhile;
