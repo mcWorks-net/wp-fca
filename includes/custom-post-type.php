@@ -2,6 +2,7 @@
 
 function fca_custom_post() {
 
+//Admission CPT
 
     $admission_label  = array (
         'name'          => __('Admission', 'textdomain'),
@@ -19,6 +20,8 @@ function fca_custom_post() {
             'supports'            => array( 'title', 'editor',  'thumbnail')
     );
     register_post_type('admission', $admission_args);
+
+//Testimonial CPT
     
     $testimonial_label  = array (
         'name'          => __('Testimonial', 'textdomain'),
@@ -36,6 +39,25 @@ function fca_custom_post() {
             'supports'            => array( 'title', 'editor',  'thumbnail')
     );
     register_post_type('testimonial', $testimonial_args);
+
+//Services CPT
+
+    $services_label  = array (
+        'name'          => __('Services', 'textdomain'),
+        'singular_name' => __('Services', 'textdomain'),
+        'add_new'       => __('Add Services', 'textdomain'),
+        'add_new_item'  => __('Add New Services', 'textdomain'),
+        'edit_item'     => __('Edit Services', 'textdomain'),
+        'all_items'     => __('Services', 'textdomain')
+    );
+    $services_args = array(  
+            'labels'              => $services_label,
+            'public'              => true,
+            'capability_type'     => 'post',
+            'show_ui'             => true,
+            'supports'            => array( 'title', 'editor',  'thumbnail')
+    );
+    register_post_type('services', $services_args);
    
 
 }

@@ -70,7 +70,49 @@
                 <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
 
                 <div id="general-<?php echo get_field('id'); ?>-content" class="general-tab__item">
-                    <?php the_content(); ?>
+                    
+                <?php if( get_field('the_content') ): ?>
+                  <?php while( the_repeater_field('the_content') ): ?>
+
+                    <div class="general-tab__item__img active">
+                        <?php 
+                            $images = get_sub_field('gallery_admission');
+                        ?>
+                         <img src="<?php echo $images[0]['url'] ?>">
+
+                    </div>
+
+                   <?php
+                       echo the_sub_field('content');
+                   ?>
+
+                    <div class="general-tab__item__img">
+
+                            <?php 
+
+                            $images = get_sub_field('gallery_admission');
+
+                            if($images):
+                            ?>
+
+                            <?php foreach($images as $image):?>
+                            <a data-lightbox="<?php echo get_the_title() ?>" href="<?php echo esc_url($image['sizes']['large']); ?>">
+                                <img src="<?php echo esc_url($image['sizes']['large']); ?>"
+                                        alt="admission-<?php echo $image['name'] ?>" 
+                                        height="<?php echo substr(esc_url($image['height']),7);?>px"
+                                        width="<?php echo substr(esc_url($image['width']),7); ?>px"
+                                    >
+                            </a>
+                            <?php endforeach; ?>          
+                            <?php endif; ?>
+
+                    </div>
+                    
+                    
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+
+
                 </div>
 
                 <?php
