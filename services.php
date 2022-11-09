@@ -17,6 +17,7 @@
       <div class="container">
         <div class="services__wrapper">
           <div class="services__regular">
+        
             <div class="services__regular__text">
               <h3>Regular Instructional Services:</h3>
               <p>
@@ -54,81 +55,42 @@
             </div>
             <img src="./img/Rectangle 53.png" alt="" />
           </div>
+
           <div class="services__kinds">
+
+
+          <?php 
+                $args = array(
+                'post_type' => 'services',
+                'posts_per_page' => -1,
+                );
+                $newQuery = new WP_Query($args)
+            ?>
+
+            <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
+
             <div class="services__item">
               <div class="services__item__content">
-                <img src="./img/Rectangle 54.png" alt="" />
+                <?php echo get_the_post_thumbnail()?>
                 <div class="services__item__content__text">
-                  <h3><i class="fa-solid fa-book"></i>Tutorial Services</h3>
+                  <h3><i class="<?php echo get_field('icon'); ?>"></i><?php echo the_title(); ?></h3>
                   <p>
-                    Tutorial services are available all-year round. Parents may
-                    inquire at the admin office to avail of this extra service
-                    for their child. FCA does its best to match up students
-                    needing extra help with tutors who are passionate to help
-                    them learn and keep up with class activities.
+                    <?php echo get_field('description'); ?>
                   </p>
                   <a href="" class="btn bg--green">Inquire</a>
                 </div>
               </div>
             </div>
-            <div class="services__item">
-              <div class="services__item__content">
-                <img src="./img/Rectangle 55.png" alt="" />
-                <div class="services__item__content__text">
-                  <h3><i class="fa-solid fa-pen-ruler"></i>Arts</h3>
-                  <p>
-                    Art classes at FCA are hands-on, where students learn
-                    sketching, painting with acrylics on canvas, and using other
-                    mediums of art.
-                  </p>
-                  <a href="" class="btn bg--green">Inquire</a>
-                </div>
-              </div>
-            </div>
-            <div class="services__item">
-              <div class="services__item__content">
-                <img src="./img/Rectangle 57.png" alt="" />
-                <div class="services__item__content__text">
-                  <h3><i class="fa-solid fa-music"></i>Music Lessons</h3>
-                  <p>
-                    Music class at FCA is practical and hands-on. Currently,
-                    classes offered are basic guitar, keyboard, and drums.
-                  </p>
-                  <a href="" class="btn bg--green">Inquire</a>
-                </div>
-              </div>
-            </div>
-            <div class="services__item">
-              <div class="services__item__content">
-                <img src="./img/Rectangle 59.png" alt="" />
-                <div class="services__item__content__text">
-                  <h3><i class="fa-solid fa-volleyball"></i>Sports</h3>
-                  <p>
-                    Physical Education class helps keep students physically fit
-                    and active. We incorporate a variety of sports and
-                    activities such as kickboxing, mixed martial arts, and fun
-                    activities such as hiking and camping.
-                  </p>
-                  <a href="" class="btn bg--green">Inquire</a>
-                </div>
-              </div>
-            </div>
-            <div class="services__item">
-              <div class="services__item__content">
-                <img src="./img/Rectangle 61.png" alt="" />
-                <div class="services__item__content__text">
-                  <h3><i class="fa-solid fa-bus"></i>Transportation</h3>
-                  <p>
-                    We offer transportation services for students. We have two
-                    (2) buses. You can sign up for the school service by filling
-                    out a form at the front office. Monthly bus service costs
-                    are based on the distance of the student’s pickup and
-                    drop-off location from the school.
-                  </p>
-                  <a href="" class="btn bg--green">Inquire</a>
-                </div>
-              </div>
-            </div>
+
+            <?php
+                endwhile;
+                else :
+                    echo "no available content yet";
+                endif;
+                wp_reset_postdata();
+            ?>
+
+        
           </div>
         </div>
       </div>
