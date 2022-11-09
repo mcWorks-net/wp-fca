@@ -177,7 +177,7 @@
                   <?php foreach($images as $image):?>
                     <a data-lightbox="<?php echo get_the_title() ?>" href="<?php echo esc_url($image['sizes']['large']); ?>">
                         <img src="<?php echo esc_url($image['sizes']['large']); ?>"
-                              alt="activities-<?php echo $activities_index ?>" 
+                              alt="Testimony-<?php echo $activities_index ?>" 
                               height="<?php echo substr(esc_url($image['height']),7);?>px"
                               width="<?php echo substr(esc_url($image['width']),7); ?>px"
                           >
