@@ -6587,9 +6587,10 @@ width: 100%;
 }
 
 .modalInquire {
+  display: none;
   position: fixed; 
   z-index: 1; 
-  padding-top: 70px;
+  padding-top: 100px;
   left: 0;
   right: 0;
   top: 0;
@@ -6600,14 +6601,19 @@ width: 100%;
   background-color: rgba(0,0,0,0.4); 
 }
 
+.modalInquire.active {
+  display: block;
+}
+
 .modalInquire__modal {
   position: relative;
   background-color: rgb(255, 255, 255);
   width: 50rem;
-  height: 70vh;
+  height: 72vh;
   margin: 0 auto;
   padding: 4rem 2rem;
   overflow: auto;
+  z-index: 1;
 }
 
 .InqureTitle {
@@ -6657,7 +6663,9 @@ width: 100%;
   padding: 1rem;
   font-family: 'Raleway', sans-serif;
 }
-
+.modalInqure_form textarea:focus{
+  outline: none;
+}
 .inputGroup {
   position: relative;
   margin-bottom: 1rem;
@@ -6673,7 +6681,7 @@ width: 100%;
 
 .inputGroup input:focus + label, 
 .inputGroup textarea:focus + label {
-  top: -3rem;
+  top: -2.8rem;
   transition: 0.3s ease;
   font-size: 1.3rem;
 }
@@ -6681,7 +6689,7 @@ width: 100%;
 
 .inputGroup input:valid + label, 
 .inputGroup textarea:valid + label {
-  top: -3rem;
+  top: -2.8rem;
   transition: 0.3s ease;
   font-size: 1.3rem;
 } 

@@ -5,12 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontline Christian Academy - Home</title>
-    <!-- <link rel="stylesheet" href="./dist/css/main.min.css" /> -->
-    <link rel="stylesheet" href="css/animate.css" />
-    <script src="js/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
     <script
       src="https://kit.fontawesome.com/a6726e13c6.js"
       crossorigin="anonymous"

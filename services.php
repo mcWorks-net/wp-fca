@@ -41,7 +41,7 @@
                   <p>
                     <?php echo get_field('description'); ?>
                   </p>
-                  <a href="" class="btn bg--green">Inquire</a>
+                  <a href="" id="btnInquire" class="btn bg--green btnInquire" data-inquire="<?php echo the_title(); ?>">Inquire</a>
                 </div>
               </div>
             </div>
@@ -74,49 +74,55 @@
     </section>
 
     <div class="modalInquire">
-      <div class="container">
           <div class="modalInquire__modal">
-             <div class="modalCloseBtn">
-              <a href=""><b>X</b></a>
+             <div class="modalCloseBtn" id="modalCLose">
+              <a href="#"><b>X</b></a>
              </div>
              <div class="modalInqure_form">
                 <div class="InqureTitle">
-                  <h3>This is the subject title</h3>
+                  <h3 id="inqureTitle">This is the subject title</h3>
                 </div>
                 <form action="">
 
-                  <div class="inputGroup">
-                    <input type="text" required> 
-                    <label for="">Grade Level</label> 
-                  </div>
-                 
-                  <div class="inputGroup">
-                    <input type="text" required>
-                    <label for="">Full Name</label> 
-                  </div>
-
-                  <div class="inputGroup">
-                    <input type="text" required>
-                    <label for="">Email</label> 
-                  </div>
-
-                  <div class="inputGroup">
-                    <input type="text" required> 
-                    <label for="">Mobile Number</label>
-                  </div>
-
-                  <div class="inputGroup">
-                    <textarea required></textarea> 
-                    <label for="">Message</label> 
-                  </div>
-
+                  <?php echo do_shortcode('[contact-form-7 id="237" title="Contact form 1"]') ?>
 
 
                  <a href="" class="btn bg--green">Send Inquery</a>
                 </form>
             </div>
-          </div>
       </div>
     </div>
+
+    <script>
+      const btnInquire = document.querySelectorAll(".btnInquire");
+      const displayModal = document.querySelector(".modalInquire");
+      const modalCLose = document.querySelector("#modalCLose");
+
+      const inquireTitle = document.getElementById('inqureTitle');
+
+      btnInquire.forEach((btn)=> {
+        btn.addEventListener('click', (e)=> {
+          e.preventDefault();
+          displayModal.classList.add('active');
+
+          inquireTitle.innerText = "Inquire for " + btn.getAttribute('data-inquire');
+        })
+      })
+
+      modalCLose.addEventListener('click', (e) => {
+        e.preventDefault();
+        displayModal.classList.remove('active');
+      })
+
+      window.addEventListener('click', (e)=> {
+        console.log(e.target)
+        if(e.target.classList.contains('modalInquire')) {
+          displayModal.classList.remove('active');
+        }
+      })
+
+
+      
+    </script>
 
 <?php get_footer(); ?>
