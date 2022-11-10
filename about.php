@@ -66,8 +66,8 @@
                                 width="<?php echo substr(esc_url($image['width']),7); ?>px"
                             >
                       </a>
-                      <?php endforeach; ?>          
-                    <?php endif; ?>
+                    <?php endforeach; ?>          
+                  <?php endif; ?>
 
 
                 </div>
