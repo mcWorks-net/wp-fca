@@ -18,7 +18,10 @@
           <div class="gallery__pics">
 
 
-            <?php if( get_field('gallery_photo_album') ): ?>
+        
+
+
+          <?php if( get_field('gallery_photo_album') ): ?>
                   <?php while( the_repeater_field('gallery_photo_album') ): ?>
 
                 <div class="gallery__pics__item">
@@ -35,7 +38,7 @@
                     <?php foreach($images as $image):?>
                     <a data-lightbox="<?php echo get_the_title() ?>" href="<?php echo esc_url($image['sizes']['large']); ?>">
                         <img src="<?php echo esc_url($image['sizes']['large']); ?>"
-                                alt="admission-<?php echo $image['name'] ?>" 
+                                alt="<?php echo the_sub_field('photo_album_name'); ?>-<?php echo $image['name'] ?>" 
                                 
                             >
                     </a>
@@ -54,6 +57,8 @@
           
           </div>
           <a href="" class="gallery btn bg--light">Load More</a>
+
+
           <div class="gallery__vids">
 
             <div class="gallery__vids__title">
@@ -66,8 +71,10 @@
             </div>
 
 
+            
             <div class="gallery__vids__collection">
 
+            
               <div class="gallery__vids__collection__item">
                 <img src="./img/11111.png" alt="" />
                 <h3>Event Video</h3>
@@ -76,6 +83,7 @@
 
               
             </div>
+
           </div>
           <a href="" class="gallery btn bg--light">Load More</a>
         </div>
