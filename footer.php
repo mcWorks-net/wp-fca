@@ -55,12 +55,30 @@
                   <span>Other Offers</span>
                   <i class="fa-solid fa-circle-chevron-down"></i>
                 </h4>
+
                 <ul>
-                  <li>Tutorial</li>
-                  <li>Arts Lessons</li>
-                  <li>Music Lessons</li>
-                  <li>Sports</li>
-                  <li>Transportation</li>
+                  
+                <?php 
+                  $args = array(
+                  'post_type' => 'services',
+                  'posts_per_page' => -1,
+                  );
+                  $newQuery = new WP_Query($args)
+                  ?>
+
+                  <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
+                  
+                  <li><a href="<?php site_url('services') ?>"><?php the_title(); ?></a></li>
+                
+                      <?php
+                      endwhile;
+                      else :
+                          echo "no available content yet";
+                      endif;
+                      wp_reset_postdata();
+
+                  ?>
+
                 </ul>
               </div>
               <div class="links__item">

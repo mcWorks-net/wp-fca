@@ -58,6 +58,24 @@ function fca_custom_post() {
             'supports'            => array( 'title', 'editor',  'thumbnail')
     );
     register_post_type('services', $services_args);
+
+    // $gallery_label  = array (
+    //     'name'          => __('Gallery', 'textdomain'),
+    //     'singular_name' => __('Gallery', 'textdomain'),
+    //     'add_new'       => __('Add Gallery', 'textdomain'),
+    //     'add_new_item'  => __('Add New Gallery', 'textdomain'),
+    //     'edit_item'     => __('Edit Gallery', 'textdomain'),
+    //     'all_items'     => __('Gallery', 'textdomain')
+    // );
+    // $gallery_args = array(  
+    //         'labels'              => $gallery_label,
+    //         'public'              => true,
+    //         'capability_type'     => 'post',
+    //         'show_ui'             => true,
+    //         'taxonomies'          => array( 'category' ),
+    //         'supports'            => array( 'title', 'editor',  'thumbnail')
+    // );
+    // register_post_type('gellery', $gallery_args);
    
 
 }

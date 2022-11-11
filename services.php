@@ -80,23 +80,23 @@
              </div>
              <div class="modalInqure_form">
                 <div class="InqureTitle">
-                  <h3 id="inqureTitle">This is the subject title</h3>
+                  <h3 id="inqureTitle" class="mb--4">This is the subject title</h3>
                 </div>
                 <form action="">
 
-                  <?php echo do_shortcode('[contact-form-7 id="237" title="Contact form 1"]') ?>
+                  <?php echo do_shortcode('[contact-form-7 id="237" title="Inquiry"]') ?>
 
-
-                 <a href="" class="btn bg--green">Send Inquery</a>
                 </form>
             </div>
       </div>
     </div>
 
+
     <script>
       const btnInquire = document.querySelectorAll(".btnInquire");
       const displayModal = document.querySelector(".modalInquire");
       const modalCLose = document.querySelector("#modalCLose");
+      const hiddenInput = document.getElementById("hiddenInput");
 
       const inquireTitle = document.getElementById('inqureTitle');
 
@@ -106,6 +106,8 @@
           displayModal.classList.add('active');
 
           inquireTitle.innerText = "Inquire for " + btn.getAttribute('data-inquire');
+          hiddenInput.value = btn.getAttribute('data-inquire');
+
         })
       })
 

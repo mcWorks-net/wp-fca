@@ -6693,3 +6693,7 @@ width: 100%;
   transition: 0.3s ease;
   font-size: 1.3rem;
 } 
+
+.hideThis {
+  display: none;
+}
