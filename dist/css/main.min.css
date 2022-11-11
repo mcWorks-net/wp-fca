@@ -6697,3 +6697,28 @@ width: 100%;
 .hideThis {
   display: none;
 }
+
+/* -------Gallery Page-------------*/
+
+.imageContainer {
+  max-width: 42.3rem;
+  max-height: 36.2rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imageContainer a img{
+  width: 42.3rem !important;
+  height: 36.2rem !important;
+  object-fit: cover !important;
+  transition: 0.5s ease;
+}
+
+.imageContainer a img:hover{
+  transform: scale(1.2);
+  transition: 0.5s ease;
+}
+.gallery .imageContainer a {
+  padding: unset !important;
+  border: unset !important;
+}
