@@ -9,9 +9,11 @@
 <?php get_header()?>
 
     <section class="banner">
-      <video muted loop autoplay>
+      <div class="dimVideo">
+         <video muted loop autoplay>
         <source src="<?php echo get_template_directory_uri() ?>./img/fca-banner-video.mp4" />
       </video>
+      </div>
       <div class="container">
         <div class="banner__wrapper">
           <div class="banner__text">

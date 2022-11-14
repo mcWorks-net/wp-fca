@@ -15,48 +15,15 @@
     <section class="gallery">
       <div class="container">
         <div class="gallery__wrapper">
-          <div class="gallery__pics">
+          
 
 
+          <?php echo do_shortcode('[ajax_load_more post_type="page"]'); ?>
         
 
-
-          <?php if( get_field('gallery_photo_album') ): ?>
-                  <?php while( the_repeater_field('gallery_photo_album') ): ?>
-
-                <div class="gallery__pics__item">
-                    <div class="imageContainer">
-
-                    <?php 
-
-                        $images = get_sub_field('photos');
-
-                        if($images):
-                        ?>
-
-
-                    <?php foreach($images as $image):?>
-                    <a data-lightbox="<?php echo get_the_title() ?>" href="<?php echo esc_url($image['sizes']['large']); ?>">
-                        <img src="<?php echo esc_url($image['sizes']['large']); ?>"
-                                alt="<?php echo the_sub_field('photo_album_name'); ?>-<?php echo $image['name'] ?>" 
-                                
-                            >
-                    </a>
-                    <?php endforeach; ?>          
-                    <?php endif; ?>  
-                    </div>
-
-                    <h3><?php echo the_sub_field('photo_album_name'); ?></h3>
-                    <p><?php echo the_sub_field('album_desc')  ?></p>
-                </div>
-
-                      
-           <?php endwhile; ?>
-        <?php endif; ?>
-
           
-          </div>
-          <a href="" class="gallery btn bg--light">Load More</a>
+          
+          <!-- <a href="" class="gallery btn bg--light">Load More</a> -->
 
 
           <div class="gallery__vids">
