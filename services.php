@@ -33,7 +33,12 @@
 
             <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
 
-            <div class="services__item">
+            <?php
+              $thePost = get_post();
+              $sectionHook = $thePost->post_name;
+            ?>
+
+            <div class="services__item" id="<?php echo $sectionHook ?>">
               <div class="services__item__content">
                 <?php echo get_the_post_thumbnail()?>
                 <div class="services__item__content__text">

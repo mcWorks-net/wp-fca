@@ -15,11 +15,11 @@
           <div class="contact__content">
           <div class="contact__form">
             <div class="contact__form__box">
-              <input id="name" name="name" type="text" required />
+              <input id="name" name="name" type="text" required/>
               <label for="name">Your Name</label>
             </div>
             <div class="contact__form__box">
-              <input id="phone" name="phone" type="tel" required />
+              <input id="phone" name="phone" type="tel" required/>
               <label for="phone">Your Email</label>
             </div>
             <div class="contact__form__box">
@@ -50,24 +50,36 @@
           <div class="contact__text">
             <h1>Contact Us.</h1>
             <ul>
-              <li><i class="fa-solid fa-envelope"></i>info@fca.edu.ph</li>
-              <li>
-                <i class="fa-brands fa-facebook"></i
-                >facebook.com/frontlinechristianacademy
-              </li>
-              <li>
-                <i class="fa-solid fa-phone"></i>(049) 521-0732 | (+63)
-                908-202-0749 | (+63) 926-363-9722
-              </li>
-              <li>
-                <i class="fa-solid fa-location-dot"></i>Baloc Rd, Brgy, San
-                Pablo City, 4000 Laguna
-              </li>
+
+            
+            <?php
+                $homepage_id = get_option('page_on_front');
+              ?>
+
+              <?php
+                if(have_rows('contact_details',$homepage_id)): 
+              ?>
+
+              <?php 
+              
+              while(have_rows('contact_details',$homepage_id)) : the_row(); 
+              ?>
+
+              <li><i class="<?php the_sub_field('icon'); ?>"></i><?php the_sub_field('text'); ?></li>
+
+                    <?php endwhile; ?>          
+                <?php endif; ?>
             </ul>
           </div>
           </div>
         </div>
       </div>
     </section>
+
+    <?php
+
+        echo do_shortcode('[contact-form-7 id="262" title="Test email"]');
+    
+    ?>
 
 <?php get_footer(); ?>

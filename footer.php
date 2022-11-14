@@ -67,8 +67,18 @@
                   ?>
 
                   <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post();?>
-                  
-                  <li><a href="<?php site_url('services') ?>"><?php the_title(); ?></a></li>
+             
+                    <?php  
+                    
+                  $thePost = get_post();
+                  $sectionHook = "#" . $thePost->post_name;
+                    
+                    
+          
+                    
+                    ?>
+             
+                  <li><a href="<?php echo 'http://localhost/wp-fca/services/?'. $sectionHook ?>"><?php the_title(); ?></a></li>
                 
                       <?php
                       endwhile;

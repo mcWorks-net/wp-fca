@@ -22,6 +22,8 @@ p {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth; /*mcWordpress*/
+  scroll-padding-top: 25rem; /*mcWordpress*/
 }
 
 body {
@@ -6603,7 +6605,7 @@ width: 100%;
 .modalInquire {
   display: none;
   position: fixed; 
-  padding-top: 10%;
+  padding-top: 10rem;
   z-index: 1; 
   left: 0;
   right: 0;
@@ -6685,15 +6687,15 @@ width: 100%;
   margin-bottom: 1rem;
 }
 
-.inputGroup label{
+/* .inputGroup label{
   position: absolute;
   left: 0;
   top: -1rem;
   background-color: white;
   padding: 0.3rem;
-}
+} */
 
-.inputGroup input:focus + label, 
+/* .inputGroup input:focus + label, 
 .inputGroup textarea:focus + label {
   top: -2.8rem;
   transition: 0.3s ease;
@@ -6706,7 +6708,7 @@ width: 100%;
   top: -2.8rem;
   transition: 0.3s ease;
   font-size: 1.3rem;
-} 
+}  */
 
 .hideThis {
   display: none;
