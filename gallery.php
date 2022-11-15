@@ -21,8 +21,7 @@
           <?php echo do_shortcode('[ajax_load_more post_type="page"]'); ?>
         
 
-          
-          
+
           <!-- <a href="" class="gallery btn bg--light">Load More</a> -->
 
 

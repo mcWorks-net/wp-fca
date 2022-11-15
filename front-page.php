@@ -118,7 +118,6 @@
               <video
                 class="why__fca"
                 src="<?php the_sub_field('video') ?>"
-                autoplay
                 muted
                 loop
                 controls
