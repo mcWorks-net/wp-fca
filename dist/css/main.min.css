@@ -6625,7 +6625,7 @@ width: 100%;
   position: relative;
   background-color: rgb(255, 255, 255);
   width: 50rem;
-  height: 65rem;
+  height: 61rem;
   margin: 0 auto;
   padding: 4rem 2rem;
   overflow: auto;
@@ -6667,6 +6667,10 @@ width: 100%;
   font-family: 'Raleway', sans-serif;
 }
 
+.modalInquire form p{
+  height: 2rem;
+}
+
 .modalInqure_form textarea{
   resize: none;
   height: 15rem;
@@ -6687,15 +6691,15 @@ width: 100%;
   margin-bottom: 1rem;
 }
 
-/* .inputGroup label{
+.inputGroup label{
   position: absolute;
   left: 0;
   top: -1rem;
   background-color: white;
   padding: 0.3rem;
-} */
+} 
 
-/* .inputGroup input:focus + label, 
+.inputGroup input:focus + label, 
 .inputGroup textarea:focus + label {
   top: -2.8rem;
   transition: 0.3s ease;
@@ -6708,7 +6712,7 @@ width: 100%;
   top: -2.8rem;
   transition: 0.3s ease;
   font-size: 1.3rem;
-}  */
+}  
 
 .hideThis {
   display: none;

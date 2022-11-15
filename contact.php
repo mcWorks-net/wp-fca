@@ -76,10 +76,4 @@
       </div>
     </section>
 
-    <?php
-
-        echo do_shortcode('[contact-form-7 id="262" title="Test email"]');
-    
-    ?>
-
 <?php get_footer(); ?>

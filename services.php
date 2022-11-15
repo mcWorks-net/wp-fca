@@ -78,13 +78,17 @@
              </div>
              <div class="modalInqure_form">
                 <div class="InqureTitle">
-                  <h3 id="inqureTitle" class="mb--4">This is the subject title</h3>
+                  <h3 id="inqureTitle" class="mb--2">This is the subject title</h3>
                 </div>
-                <form action="">
+     
 
-                  <?php echo do_shortcode('[contact-form-7 id="237" title="Inquiry"]') ?>
+                  <?php
 
-                </form>
+                      echo do_shortcode('[contact-form-7 id="265" title="Test"]');
+                  
+                  ?>
+
+
             </div>
       </div>
     </div>
