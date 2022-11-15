@@ -30,11 +30,6 @@
 
             <div class="gallery__vids__title">
               <h2>Videos & Events</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-                facere, accusamus vitae quo itaque repellat quas a perferendis
-                cumque enim sapiente, voluptate ducimus provident fuga!
-              </p>
             </div>
 
 

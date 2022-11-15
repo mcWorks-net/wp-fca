@@ -84,7 +84,7 @@
 
                   <?php
 
-                      echo do_shortcode('[contact-form-7 id="265" title="Test"]');
+                      echo do_shortcode('[contact-form-7 id="265" title="Inquiry"]');
                   
                   ?>
 

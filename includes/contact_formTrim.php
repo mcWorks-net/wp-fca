@@ -70,3 +70,16 @@
         }
         return $contentMessage;
     }
+
+    add_filter( 'wpcf7_form_elements', 'contentSubject' );
+    function contentSubject( $contentSubject ) {
+        // $name == Form Tag Name [textarea* your-message] 
+        $message = 'name="your-subject"';
+
+        $str_pos = strpos( $contentSubject, $message);
+        if (false !== $str_pos) {
+            $contentSubject = substr_replace( $contentSubject, ' required="required" ', $str_pos, 0 );
+        }
+        return $contentSubject;
+    }
+

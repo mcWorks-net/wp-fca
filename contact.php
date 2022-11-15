@@ -14,23 +14,7 @@
         <div class="contact__wrapper">
           <div class="contact__content">
           <div class="contact__form">
-            <div class="contact__form__box">
-              <input id="name" name="name" type="text" required/>
-              <label for="name">Your Name</label>
-            </div>
-            <div class="contact__form__box">
-              <input id="phone" name="phone" type="tel" required/>
-              <label for="phone">Your Email</label>
-            </div>
-            <div class="contact__form__box">
-              <input id="subject" name="subject" required></input>
-              <label for="subject">Subject</label>
-            </div>
-            <div class="contact__form__box">
-              <textarea id="message" name="message" required></textarea>
-              <label for="message">Message</label>
-            </div>
-            <a href="" class="btn bg--green">Send Message</a>
+            <?php echo do_shortcode('[contact-form-7 id="263" title="Contact Form"]'); ?>
           </div>
           <ul class="contact__info__max">
             <li><i class="fa-solid fa-envelope"></i> <span>info@fca.edu.ph</span> </li>
@@ -48,7 +32,7 @@
             </li>
           </ul>
           <div class="contact__text">
-            <h1>Contact Us.</h1>
+            <h1>Contact Us</h1>
             <ul>
 
             

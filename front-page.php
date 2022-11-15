@@ -21,8 +21,8 @@
             <p>
             <?php echo get_field('banner_intro'); ?>
             </p>
-            <a href="" class="btn bg--green">Inquire now!</a>
-            <a href="" class="btn bg--transparent">Schedule a Visit</a>
+            <a href="<?php echo site_url('contact') ?>" class="btn bg--green">Inquire now!</a>
+            <a href="<?php echo site_url('contact') ?>" class="btn bg--transparent">Schedule a Visit</a>
           </div>
         </div>
       </div>
