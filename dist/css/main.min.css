@@ -1357,8 +1357,9 @@ body {
   margin-top: 8rem;
   display: none;
 }
-.why__text__content video {
-  height: 35rem;
+.why__text__content iframe {
+  margin: 0 auto;
+  width: 50rem!important;
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .why__text__content p {
@@ -5930,6 +5931,7 @@ body {
 }
 .header2__contacts ul li:nth-child(4):hover {
   background: hsl(115deg, 66%, 35%);
+  border-radius: 0.5rem;
 }
 .header2__contacts ul li:nth-child(4):hover a {
   padding: 1rem 3rem !important;
@@ -5955,6 +5957,7 @@ body {
 .header2__nav ul li {
   border-right: 2px solid hsl(0deg, 0%, 45%);
   padding-right: 7rem;
+  position: relative;
 }
 .header2__nav ul li a {
   color: hsl(0deg, 0%, 45%);
@@ -6806,4 +6809,24 @@ width: 100%;
   .footer__branding {
     padding: 2rem 0;
   }
+}
+.header2__nav ul li.current-menu-item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: hsl(43deg, 71%, 50%);
+  height: 0.5rem;
+  left: 0;
+  top: -2.2rem;
+  border-radius: 1.6rem;
+}
+
+@media screen and (max-width: 768px) { 
+  .header2__nav ul li.current-menu-item::after {
+    display: none;
+  }
+}
+
+.hmservices fieldset { 
+  min-height: 24.5rem;
 }

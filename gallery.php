@@ -18,7 +18,7 @@
           
 
 
-          <?php echo do_shortcode('[ajax_load_more post_type="page"]'); ?>
+          <?php echo do_shortcode('[ajax_load_more post_type="page" offset="6"]'); ?>
         
 
 
@@ -35,14 +35,19 @@
             
             <div class="gallery__vids__collection">
 
-            
-              <div class="gallery__vids__collection__item">
-                <img src="./img/11111.png" alt="" />
-                <h3>Event Video</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-
+              <?php if( get_field('video_gallery') ): ?>
+                    <?php while( the_repeater_field('video_gallery') ): ?>
               
+                <div class="gallery__vids__collection__item">
+                <iframe width="417" height="362" src="<?php the_sub_field('video_link') ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <h3><?php echo the_sub_field('video_title'); ?></h3>
+                  <p><?php echo the_sub_field('video_description'); ?></p>
+                </div>
+
+                <?php endwhile; ?>
+              <?php endif; ?>
+              
+             
             </div>
 
           </div>

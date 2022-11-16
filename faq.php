@@ -12,7 +12,7 @@
 
 
 <section class="faq-banner">
-      <h1>F.A.Q.</h1>
+      <h1>Frequently Asked Questions</h1>
     </section>
 
     <section class="faq-tab">
@@ -174,7 +174,7 @@
               <div class="faq-tab__further">
                 <h4>
                   For further questions, please click
-                  <a href="contact.html">here.</a>
+                  <a href="<?php echo site_url('contact'); ?>">here.</a>
                 </h4>
               </div>
             </div>

@@ -70,7 +70,7 @@
                   >Facebook</a
                 >
               </li>
-              <li><a href="faq.html" class="btn bg--transparent">FAQ</a></li>
+              <li><a href="<?php echo site_url('faq') ?>" class="btn bg--transparent">FAQ</a></li>
             </ul>
           </div>
           <div class="toggle__menu2">

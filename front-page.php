@@ -22,7 +22,7 @@
             <?php echo get_field('banner_intro'); ?>
             </p>
             <a href="<?php echo site_url('contact') ?>" class="btn bg--green">Inquire now!</a>
-            <a href="<?php echo site_url('contact') ?>" class="btn bg--transparent">Schedule a Visit</a>
+            <!-- <a href="<?php /*echo site_url('contact')*/ ?>" class="btn bg--transparent">Schedule a Visit</a> -->
           </div>
         </div>
       </div>
@@ -115,13 +115,7 @@
               id="rdbtn-<?php the_sub_field('id') ?>-content"
               class="why__text__content  noborder"
             >
-              <video
-                class="why__fca"
-                src="<?php the_sub_field('video') ?>"
-                muted
-                loop
-                controls
-              ></video>
+            <iframe width="622" height="350" src="<?php the_sub_field('video') ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <?php the_sub_field('text_content') ?>
             </div>
             
@@ -176,7 +170,7 @@
 
                 <figure>
                   <?php foreach($images as $image):?>
-                    <a data-lightbox="<?php echo get_the_title() ?>" href="<?php echo esc_url($image['sizes']['large']); ?>">
+                    <a data-lightbox="<?php echo the_title() ?>" href="<?php echo esc_url($image['sizes']['large']); ?>">
                         <img src="<?php echo esc_url($image['sizes']['large']); ?>"
                               alt="Testimony-<?php echo $activities_index ?>" 
                               height="<?php echo substr(esc_url($image['height']),7);?>px"

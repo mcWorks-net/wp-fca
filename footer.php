@@ -97,7 +97,7 @@
                   <i class="fa-solid fa-circle-chevron-down"></i>
                 </h4>
                 <ul>
-                  <?php wp_menu_li(); ?>
+                  <?php wp_footer_li(); ?>
                 </ul>
               </div>
             </nav>

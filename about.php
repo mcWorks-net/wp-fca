@@ -51,24 +51,23 @@
                 <div class="abt-tab__item__img">
 
                 <?php 
-
+                   
                     $images = get_sub_field('gallery_about');
 
                     if($images):
+                     
                     ?>
 
-           
                     <?php foreach($images as $image):?>
-                      <a data-lightbox="<?php echo get_the_title() ?>" href="<?php echo esc_url($image['sizes']['large']); ?>">
-                          <img src="<?php echo esc_url($image['sizes']['large']); ?>"
-                                alt="Testimony-<?php echo $activities_index ?>" 
+                      <a data-lightbox="<?php echo the_sub_field('title') ?>" href="<?php echo esc_url($image['sizes']['large']); ?>">
+                      <img src="<?php echo esc_url($image['sizes']['large']); ?>"
+                                alt ="<?php echo $image['alt'] ?>"
                                 height="<?php echo substr(esc_url($image['height']),7);?>px"
                                 width="<?php echo substr(esc_url($image['width']),7); ?>px"
                             >
                       </a>
                     <?php endforeach; ?>          
                   <?php endif; ?>
-
 
                 </div>
               </div>

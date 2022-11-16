@@ -1,12 +1,11 @@
 <section class="contribute">
     <div class="container">
     <div class="contribute__wrapper">
-        <h3>Contribute to our Programs & Projects</h3>
+        <h3>Volunteer Service Opportunity</h3>
         <p>
-        Your giving allows us to continue to actively partner with needs of
-        people in the communities we serve.
+        opportunity for teacher volunteers to spend a year (12-month period) in the Philippines, serving at the school and in various ministry activities of Philippine Frontline Ministries.
         </p>
-        <a href="" class="btn bg--primary">Give</a>
+        <a href="<?php echo site_url('volunteer'); ?>" class="btn bg--primary">See more</a>
     </div>
     </div>
 </section>
